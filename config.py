@@ -2,11 +2,16 @@
 # NEXOR MUSIC  —  Developed & maintained by ADITYA
 # Developer : https://t.me/NEXOR_BLAZE
 # Channel   : https://t.me/MUSIXX_HUB
-
-# Copyright (C) 2026 by Aditya (NEXOR_BLAZE)@Telegram, < https://t.me/NEXOR_BLAZE >.
-# This file is part of < https://t.me/MUSIXX_HUB > project (NEXOR MUSIC),
-# modified from AloneMusic and released under the "GNU v3.0 License Agreement".
-# Please see the LICENSE file included with this project.
+# Copyright (C) 2026 by Aditya (NEXOR_BLAZE), < https://t.me/NEXOR_BLAZE >.
+# Modified by Aditya (NEXOR_BLAZE) from the original AloneMusic.
+# ─────────────────────────────────────────────────────────────
+# Original work (kept as required by GNU GPL v3):
+#
+# Copyright (C) 2021-2022 by TheAloneteam@Github, < https://github.com/TheAloneTeam >.
+#
+# This file is part of < https://github.com/TheAloneTeam/TheAloneMusic > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TheAloneTeam/TheAloneMusic/blob/master/LICENSE >
 # All rights reserved.
 
 import re
@@ -18,14 +23,17 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", 0))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", 38202938))
+API_HASH = getenv("API_HASH", "da600db56949337e7131535fbf299862")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "9248902465:AAFzCrh_SgpuawsyjV8lFs-EnYmoATxXtss")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv(
+    "MONGO_DB_URI",
+    "mongodb+srv://likeeadii80_db_user:BvxekuzSBMuULZmv@cluster0.08xzqdo.mongodb.net/?appName=Cluster0",
+)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 
@@ -33,11 +41,11 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 ADS_MODE = getenv("ADS_MODE", None)
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", 0))
+LOGGER_ID = int(getenv("LOGGER_ID", -1004444265125))
 
 DEBUG_IGNORE_LOG = True
 # Get this value from  on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 0))  # set your own Telegram user id
+OWNER_ID = int(getenv("OWNER_ID", 8755911692))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -51,8 +59,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MUSIXX_HUB")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/MUSIXX_HUB")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/himanshu_official1")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Ethical_hacker1232")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
@@ -74,7 +82,10 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv(
+    "STRING_SESSION",
+    "BQJG7joAVt7tgpDYMx6T7rKmOgQHFkPVAKJnzKfI2pQ8ebaG07_p51XqGpENNq6Zf_2YGu3b-SqadSBYKme8E-DYFqXkNAFxPFI9L9JXPC7GH1zSeZ95TejGA9xc-qz-p_fu3RIjaBhuz9QfQl-E8cKfZW5Dw7_eCh3M-U05i3IduGQcZdhkdtuHy1MGZHyq62kgAb-t0xwg46Ia3_9tMroaww9VBIR1kzKSaz6Xnxo_Cx5qejPJYNmjChW_ZiIWc1UW5ZecSqLarWVWg3YbQlwOGts6viDHzoXuYkwLaG3cClo3J1RR6QDJnUW1AgPMDX37n9XiBI5bHE1MprUEPQVM1oCtqAAAAAIMh-NXAA",
+)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -128,3 +139,4 @@ if SUPPORT_CHAT:
         raise SystemExit(
             "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
         )
+        
